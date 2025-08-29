@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonsen - Anonym verbinden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-user-secret"></i>
+                    <span>Anonsen</span>
+                </div>
+                <button class="close-btn" id="closeSidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <ul class="nav-items">
+                    <li><a href="#" class="nav-link active"><i class="fas fa-home"></i><span>Startseite</span></a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-compass"></i><span>Entdecken</span></a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-bell"></i><span>Benachrichtigungen</span></a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-envelope"></i><span>Nachrichten</span></a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-bookmark"></i><span>Gespeichert</span></a></li>
+                    <li><a href="#" class="nav-link" id="profileNavLink"><i class="fas fa-user"></i><span>Profil</span></a></li>
+                    <li><a href="#" class="nav-link"><i class="fas fa-cog"></i><span>Einstellungen</span></a></li>
+                </ul>
+                
+                <div class="sidebar-footer">
+                    <button class="create-post-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Beitrag erstellen</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-btn" id="menuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="logo-mobile">
+                        <i class="fas fa-user-secret"></i>
+                        <span>Anonsen</span>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Anonsen durchsuchen..." class="search-input">
+                </div>
+                
+                <div class="header-right">
+                    <button class="icon-btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="icon-btn profile-btn" id="profileBtn">
+                        <div class="avatar" id="headerAvatar"></div>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content Feed -->
+            <div class="content-container">
+                <!-- Stories Section -->
+                <div class="stories-section">
+                    <div class="stories-container">
+                        <div class="story your-story">
+                            <div class="story-avatar">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <span>Deine Story</span>
+                        </div>
+                        <div class="story">
+                            <div class="story-avatar"></div>
+                            <span>anonymous_user</span>
+                        </div>
+                        <div class="story">
+                            <div class="story-avatar"></div>
+                            <span>mystery_person</span>
+                        </div>
+                        <div class="story">
+                            <div class="story-avatar"></div>
+                            <span>hidden_soul</span>
+                        </div>
+                        <div class="story">
+                            <div class="story-avatar"></div>
+                            <span>phantom_user</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Posts Feed -->
+                <div class="feed">
+                    <!-- Post 1 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <div class="post-avatar"></div>
+                            <div class="post-info">
+                                <h3>anonymous_wanderer</h3>
+                                <span>vor 2 Stunden</span>
+                            </div>
+                            <button class="post-options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="post-content">
+                            <p>Manchmal entstehen die besten Gespräche, wenn man nicht weiß, mit wem man spricht. Es ist etwas Schönes daran, sich mit Seelen zu verbinden statt mit Profilen. 🌙</p>
+                        </div>
+                        
+                        <div class="post-actions">
+                            <button class="action-btn">
+                                <i class="far fa-heart"></i>
+                                <span>127</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="far fa-comment"></i>
+                                <span>23</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="far fa-paper-plane"></i>
+                            </button>
+                            <button class="action-btn save-btn">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <div class="post-avatar"></div>
+                            <div class="post-info">
+                                <h3>midnight_thoughts</h3>
+                                <span>vor 4 Stunden</span>
+                            </div>
+                            <button class="post-options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="post-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-image"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="post-actions">
+                            <button class="action-btn">
+                                <i class="far fa-heart"></i>
+                                <span>89</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="far fa-comment"></i>
+                                <span>12</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="far fa-paper-plane"></i>
+                            </button>
+                            <button class="action-btn save-btn">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <div class="post-avatar"></div>
+                            <div class="post-info">
+                                <h3>secret_artist</h3>
+                                <span>vor 6 Stunden</span>
+                            </div>
+                            <button class="post-options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="post-content">
+                            <p>Heute etwas Neues erschaffen. Keine Namen, kein Ruhm, nur pure Kreativität fließt durch anonyme Hände. Kunst um der Kunst willen. ✨</p>
+                        </div>
+                        
+                        <div class="post-actions">
+                            <button class="action-btn">
+                                <i class="far fa-heart"></i>
+                                <span>234</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="far fa-comment"></i>
+                                <span>45</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="far fa-paper-plane"></i>
+                            </button>
+                            <button class="action-btn save-btn">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <!-- Authentication Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <!-- Welcome Screen -->
+            <div class="auth-screen welcome-screen" id="welcomeScreen">
+                <div class="auth-header">
+                    <div class="auth-logo">
+                        <i class="fas fa-user-secret"></i>
+                        <h1>Anonsen</h1>
+                    </div>
+                    <p class="auth-subtitle">Authentisch verbinden, anonym bleiben</p>
+                </div>
+                
+                <div class="auth-buttons">
+                    <button class="auth-btn primary" id="registerBtn">
+                        <span>Registrieren</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="auth-btn secondary" id="loginBtn">
+                        <span>Anmelden</span>
+                    </button>
+                    <button class="auth-btn tertiary" id="laterBtn">
+                        <span>Später</span>
+                    </button>
+                </div>
+                
+                <div class="auth-footer">
+                    <p>Entdecke eine neue Art der sozialen Verbindung</p>
+                </div>
+            </div>
+            
+            <!-- Register Screen -->
+            <div class="auth-screen register-screen hidden" id="registerScreen">
+                <div class="auth-header">
+                    <button class="back-btn" id="backFromRegister">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h2>Konto erstellen</h2>
+                </div>
+                
+                <form class="auth-form" id="registerForm">
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Benutzername" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="E-Mail Adresse" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Passwort" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="confirmPassword" placeholder="Passwort bestätigen" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn primary full-width">
+                        <span>Konto erstellen</span>
+                    </button>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>oder</span>
+                </div>
+                
+                <div class="social-buttons">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        <span>Mit Google anmelden</span>
+                    </button>
+                    <button class="social-btn apple">
+                        <i class="fab fa-apple"></i>
+                        <span>Mit Apple anmelden</span>
+                    </button>
+                </div>
+                
+                <p class="auth-terms">
+                    Mit der Registrierung stimmst du unseren 
+                    <a href="#">Nutzungsbedingungen</a> und 
+                    <a href="#">Datenschutzrichtlinien</a> zu.
+                </p>
+            </div>
+            
+            <!-- Login Screen -->
+            <div class="auth-screen login-screen hidden" id="loginScreen">
+                <div class="auth-header">
+                    <button class="back-btn" id="backFromLogin">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h2>Anmelden</h2>
+                </div>
+                
+                <form class="auth-form" id="loginForm">
+                    <div class="input-group">
+                        <input type="text" id="loginUsername" placeholder="Benutzername oder E-Mail" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="Passwort" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Angemeldet bleiben
+                        </label>
+                        <a href="#" class="forgot-password">Passwort vergessen?</a>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn primary full-width">
+                        <span>Anmelden</span>
+                    </button>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>oder</span>
+                </div>
+                
+                <div class="social-buttons">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        <span>Mit Google anmelden</span>
+                    </button>
+                    <button class="social-btn apple">
+                        <i class="fab fa-apple"></i>
+                        <span>Mit Apple anmelden</span>
+                    </button>
+                </div>
+                
+                <div class="auth-switch">
+                    <p>Noch kein Konto? <a href="#" id="switchToRegister">Registrieren</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Profile Modal -->
+    <div class="profile-modal hidden" id="profileModal">
+        <div class="profile-modal-content">
+            <div class="profile-header">
+                <h2>Profil bearbeiten</h2>
+                <button class="close-profile-btn" id="closeProfileModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="profile-content">
+                <div class="profile-picture-section">
+                    <div class="profile-picture-container">
+                        <img src="" alt="Profil" class="profile-picture" id="profilePicture">
+                        <div class="profile-picture-placeholder" id="profilePicturePlaceholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="profile-picture-controls">
+                        <input type="file" id="profilePictureInput" accept="image/*" style="display: none;">
+                        <button class="btn-secondary" id="uploadPictureBtn">
+                            <i class="fas fa-camera"></i>
+                            Bild hochladen
+                        </button>
+                        <button class="btn-tertiary" id="removePictureBtn" style="display: none;">
+                            <i class="fas fa-trash"></i>
+                            Entfernen
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="profile-form">
+                    <div class="form-group">
+                        <label for="profileUsername">Benutzername</label>
+                        <input type="text" id="profileUsername" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profileEmail">E-Mail</label>
+                        <input type="email" id="profileEmail" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profileBio">Bio</label>
+                        <textarea id="profileBio" placeholder="Erzähle etwas über dich..." maxlength="160"></textarea>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="btn-primary" id="saveProfileBtn">
+                            <i class="fas fa-save"></i>
+                            Speichern
+                        </button>
+                        <button class="btn-danger" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Abmelden
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Create Post Modal -->
+    <div class="create-post-modal hidden" id="createPostModal">
+        <div class="create-post-modal-content">
+            <div class="create-post-header">
+                <button class="back-btn" id="backCreatePost" style="display: none;">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h2>Neuen Beitrag erstellen</h2>
+                <button class="close-create-post-btn" id="closeCreatePostModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Step 1: Upload/Select Image -->
+            <div class="create-post-step" id="selectImageStep">
+                <div class="image-upload-area" id="imageUploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-image upload-icon"></i>
+                        <h3>Fotos und Videos hier ablegen</h3>
+                        <p>oder</p>
+                        <button class="btn-primary" id="selectImageBtn">
+                            <i class="fas fa-folder-open"></i>
+                            Vom Computer auswählen
+                        </button>
+                        <input type="file" id="postImageInput" accept="image/*,video/*" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="quick-post-section">
+                    <div class="divider-text">
+                        <span>oder</span>
+                    </div>
+                    <button class="btn-secondary full-width" id="textOnlyPostBtn">
+                        <i class="fas fa-edit"></i>
+                        Nur Text-Beitrag erstellen
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Edit and Caption -->
+            <div class="create-post-step hidden" id="editPostStep">
+                <div class="post-preview-section">
+                    <div class="post-image-preview" id="postImagePreview"></div>
+                </div>
+                
+                <div class="post-details-section">
+                    <div class="user-info">
+                        <div class="user-avatar" id="createPostUserAvatar"></div>
+                        <span class="username" id="createPostUsername"></span>
+                    </div>
+                    
+                    <div class="caption-section">
+                        <textarea 
+                            id="postCaption" 
+                            placeholder="Beschreibe deinen Beitrag..."
+                            maxlength="500"
+                            rows="4"
+                        ></textarea>
+                        <div class="caption-counter">
+                            <span id="captionCount">0</span>/500
+                        </div>
+                    </div>
+                    
+                    <div class="post-options">
+                        <div class="option-row">
+                            <label class="option-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Standort hinzufügen
+                            </label>
+                            <input type="text" id="postLocation" placeholder="Wo warst du?" class="location-input">
+                        </div>
+                        
+                        <div class="option-row">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="allowComments" checked>
+                                <span class="checkmark-custom"></span>
+                                Kommentare erlauben
+                            </label>
+                        </div>
+                        
+                        <div class="option-row">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="allowLikes" checked>
+                                <span class="checkmark-custom"></span>
+                                Likes anzeigen
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="post-actions">
+                        <button class="btn-secondary" id="cancelPost">Abbrechen</button>
+                        <button class="btn-primary" id="publishPost">
+                            <i class="fas fa-share"></i>
+                            Veröffentlichen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
