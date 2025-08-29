@@ -1,3 +1,8 @@
+// Supabase Client erstellen
+const supabaseUrl = 'https://aadocvbpxocbzpqkpgpu.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFhZG9jdmJweG9jYnpwcWtwZ3B1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY0NDQ1MTgsImV4cCI6MjA3MjAyMDUxOH0.81_T6STdrVGblc3gKdbz5aRVFE5vg12kgvlVIHa5xrM';
+
+const supabase = Supabase.createClient(supabaseUrl, supabaseAnonKey);
 // DOM Elements
 const menuBtn = document.getElementById('menuBtn');
 const sidebar = document.getElementById('sidebar');
